@@ -10,7 +10,7 @@
   <email>chuck@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2016-02-01</date>
+ <date>2017-10-17</date>
  <version>
   <release>2.0.4</release>
   <api>1.0.0</api>
@@ -25,13 +25,6 @@
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
-   <dir name="doc">
-    <dir name="Horde">
-     <dir name="Constraint">
-      <file name="COPYING" role="doc" />
-     </dir> <!-- /doc/Horde/Constraint -->
-    </dir> <!-- /doc/Horde -->
-   </dir> <!-- /doc -->
    <dir name="lib">
     <dir name="Horde">
      <dir name="Constraint">
@@ -66,6 +59,7 @@
      </dir> <!-- /test/Horde/Constraint -->
     </dir> <!-- /test/Horde -->
    </dir> <!-- /test -->
+   <file name="LICENSE" role="doc" />
   </dir> <!-- / -->
  </contents>
  <dependencies>
@@ -91,7 +85,6 @@
  </dependencies>
  <phprelease>
   <filelist>
-   <install as="COPYING" name="doc/Horde/Constraint/COPYING" />
    <install as="Horde/Constraint.php" name="lib/Horde/Constraint.php" />
    <install as="Horde/Constraint/AlwaysFalse.php" name="lib/Horde/Constraint/AlwaysFalse.php" />
    <install as="Horde/Constraint/AlwaysTrue.php" name="lib/Horde/Constraint/AlwaysTrue.php" />
@@ -103,6 +96,7 @@
    <install as="Horde/Constraint/Null.php" name="lib/Horde/Constraint/Null.php" />
    <install as="Horde/Constraint/Or.php" name="lib/Horde/Constraint/Or.php" />
    <install as="Horde/Constraint/PregMatch.php" name="lib/Horde/Constraint/PregMatch.php" />
+   <install as="LICENSE" name="LICENSE" />
    <install as="Horde/Constraint/AllTests.php" name="test/Horde/Constraint/AllTests.php" />
    <install as="Horde/Constraint/AlwaysFalseTest.php" name="test/Horde/Constraint/AlwaysFalseTest.php" />
    <install as="Horde/Constraint/AlwaysTrueTest.php" name="test/Horde/Constraint/AlwaysTrueTest.php" />
@@ -290,7 +284,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2016-02-01</date>
+   <date>2017-10-17</date>
    <license uri="http://www.horde.org/licenses/bsd">BSD-2-Clause</license>
    <notes>
 * 
