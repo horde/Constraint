@@ -1,5 +1,5 @@
 {
-    "name": "horde/horde-constraint",
+    "name": "horde/constraint",
     "description": "Horde Constraint library",
     "type": "library",
     "homepage": "https://pear.horde.org",
@@ -23,7 +23,7 @@
         "php": "^5.3 || ^7"
     },
     "suggest": {
-        "pear-pear.horde.org/Horde_Test": "^2.1@stable"
+        "pear-pear.horde.org/Horde_Test": "^2.1"
     },
     "replace": {
         "pear-pear.horde.org/Horde_Constraint": "2.*",
