@@ -62,7 +62,6 @@
       <file name="NotTest.php" role="test" />
       <file name="NullTest.php" role="test" />
       <file name="OrTest.php" role="test" />
-      <file name="phpunit.xml" role="test" />
       <file name="PregMatchTest.php" role="test" />
      </dir> <!-- /test/Horde/Constraint -->
     </dir> <!-- /test/Horde -->
@@ -114,7 +113,6 @@
    <install as="Horde/Constraint/NotTest.php" name="test/Horde/Constraint/NotTest.php" />
    <install as="Horde/Constraint/NullTest.php" name="test/Horde/Constraint/NullTest.php" />
    <install as="Horde/Constraint/OrTest.php" name="test/Horde/Constraint/OrTest.php" />
-   <install as="Horde/Constraint/phpunit.xml" name="test/Horde/Constraint/phpunit.xml" />
    <install as="Horde/Constraint/PregMatchTest.php" name="test/Horde/Constraint/PregMatchTest.php" />
   </filelist>
  </phprelease>
