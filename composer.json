@@ -29,9 +29,6 @@
     "autoload": {
         "psr-0": {
             "Horde_Constraint": "lib/"
-        },
-        "psr-4": {
-            "Horde\\Constraint\\": "src/"
         }
     }
 }
