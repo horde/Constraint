@@ -1,14 +1,15 @@
 ---
-2.0.4:
+2.0.0alpha1:
   api: 1.0.0
   state:
-    release: stable
+    release: alpha
     api: stable
-  date: 2017-10-20
+  date: 2012-07-05
   license:
     identifier: BSD-2-Clause
     uri: http://www.horde.org/licenses/bsd
-  notes:
+  notes: |
+    First alpha release for Horde 5.
 2.0.3:
   api: 1.0.0
   state:
@@ -64,17 +65,6 @@
     uri: http://www.horde.org/licenses/bsd
   notes: |
     First beta release for Horde 5.
-2.0.0alpha1:
-  api: 1.0.0
-  state:
-    release: alpha
-    api: stable
-  date: 2012-07-05
-  license:
-    identifier: BSD-2-Clause
-    uri: http://www.horde.org/licenses/bsd
-  notes: |
-    First alpha release for Horde 5.
 1.0.1:
   api: 1.0.0
   state:
