@@ -17,18 +17,14 @@
         {
             "type": "composer",
             "url": "https://horde-satis.maintaina.com/"
-        },
-        {
-            "url": "https://horde",
-            "type": "pear"
         }
     ],
     "require": {
         "horde/horde-installer-plugin": "*",
-        "php": "^5.3 || ^7"
+        "php": "^7"
     },
     "suggest": {
-        "pear-horde/Test": "^2.1"
+        "horde/test": "^3"
     },
     "autoload": {
         "psr-0": {
