@@ -12,8 +12,8 @@
  </lead>
  <date>2021-02-24</date>
  <version>
-  <release>2.0.0alpha1</release>
-  <api>2.0.0alpha1</api>
+  <release>3.0.0alpha1</release>
+  <api>3.0.0alpha1</api>
  </version>
  <stability>
   <release>alpha</release>
@@ -81,8 +81,8 @@
   </required>
   <optional>
    <package>
-    <name>Horde_Test</name>
-    <channel>pear.horde.org</channel>
+    <name>Test</name>
+    <channel>horde</channel>
     <min>2.1.0</min>
     <max>3.0.0alpha1</max>
     <exclude>3.0.0alpha1</exclude>
@@ -207,8 +207,8 @@
   </release>
   <release>
    <version>
-    <release>2.0.0alpha1</release>
-    <api>2.0.0alpha1</api></version>
+    <release>3.0.0alpha1</release>
+    <api>3.0.0alpha1</api></version>
    <stability>
     <release>alpha</release>
     <api>alpha</api></stability>

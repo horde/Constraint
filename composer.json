@@ -11,12 +11,16 @@
             "role": "lead"
         }
     ],
-    "version": "2.0.0alpha1",
+    "version": "3.0.0alpha1",
     "time": "2021-02-24",
     "repositories": [
         {
             "type": "composer",
             "url": "https://horde-satis.maintaina.com/"
+        },
+        {
+            "url": "https://horde",
+            "type": "pear"
         }
     ],
     "require": {
@@ -24,7 +28,7 @@
         "php": "^5.3 || ^7"
     },
     "suggest": {
-        "horde/test": "^2.1"
+        "pear-horde/Test": "^2.1"
     },
     "autoload": {
         "psr-0": {
