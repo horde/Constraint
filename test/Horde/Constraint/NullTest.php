@@ -1,5 +1,10 @@
 <?php
-class Horde_Constraint_NullTest extends Horde_Test_Case
+
+namespace Horde\Constraint;
+use Horde_Test_Case;
+use \Horde_Constraint_Null;
+
+class NullTest extends Horde_Test_Case
 {
     public function testNullReturnsTrueWhenValueisNull()
     {

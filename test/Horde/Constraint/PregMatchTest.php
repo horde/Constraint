@@ -1,5 +1,10 @@
 <?php
-class Horde_Constraint_PregMatchTest extends Horde_Test_Case
+
+namespace Horde\Constraint;
+use Horde_Test_Case;
+use \Horde_Constraint_PregMatch;
+
+class PregMatchTest extends Horde_Test_Case
 {
     public function testPregReturnsTrueWhenRegexMatches()
     {

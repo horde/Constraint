@@ -1,5 +1,12 @@
 <?php
-class Horde_Constraint_OrTest extends Horde_Test_Case
+
+namespace Horde\Constraint;
+use Horde_Test_Case;
+use \Horde_Constraint_AlwaysTrue;
+use \Horde_Constraint_AlwaysFalse;
+use \Horde_Constraint_Or;
+
+class OrTest extends Horde_Test_Case
 {
     public function testOrEvaluatesTrueWhenOneConstraintIsTrue()
     {
