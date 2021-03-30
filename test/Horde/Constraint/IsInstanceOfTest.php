@@ -1,5 +1,11 @@
 <?php
-class Horde_Constraint_IsInstanceOfTest extends Horde_Test_Case
+
+namespace Horde\Constraint;
+use Horde_Test_Case;
+use \Horde_Constraint_IsInstanceOf;
+use \StdClass;
+
+class IsInstanceOfTest extends Horde_Test_Case
 {
     public function testConstraintReturnsFalseWhenInstanceIsWrongClass()
     {

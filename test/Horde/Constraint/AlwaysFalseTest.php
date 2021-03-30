@@ -1,5 +1,10 @@
 <?php
-class Horde_Constraint_AlwaysFalseTest extends Horde_Test_Case
+
+namespace Horde\Constraint;
+use Horde_Test_Case;
+use \Horde_Constraint_AlwaysFalse;
+
+class AlwaysFalseTest extends Horde_Test_Case
 {
     public static function randomObjectProvider()
     {
