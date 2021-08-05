@@ -1,6 +1,6 @@
 <?php
 
-namespace Horde\Constraint;
+namespace Horde\Constraint\Test;
 use Horde_Test_Case;
 use \Horde_Constraint_Null;
 
