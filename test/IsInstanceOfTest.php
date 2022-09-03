@@ -1,9 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Horde\Constraint\Test;
+
+use Horde_Constraint_IsInstanceOf;
 use Horde_Test_Case;
-use \Horde_Constraint_IsInstanceOf;
-use \StdClass;
+use StdClass;
 
 class IsInstanceOfTest extends Horde_Test_Case
 {

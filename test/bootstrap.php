@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 $candidates = [
     dirname(__FILE__, 2) . '/vendor/autoload.php',
     dirname(__FILE__, 4) . '/autoload.php',
@@ -7,6 +10,7 @@ $candidates = [
 foreach ($candidates as $candidate) {
     if (file_exists($candidate)) {
         require_once $candidate;
+        break;
     }
 }
 \Horde_Test_Bootstrap::bootstrap(dirname(__FILE__));

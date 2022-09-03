@@ -1,19 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Horde\Constraint\Test;
+
+use Horde_Constraint_AlwaysTrue;
 use Horde_Test_Case;
-use \Horde_Constraint_AlwaysTrue;
 
 class AlwaysTrueTest extends Horde_Test_Case
 {
     public static function randomObjectProvider()
     {
-        return array(
-            array('teststring'),
-            array(''),
-            array(true),
-            array(false),
-        );
+        return [
+            ['teststring'],
+            [''],
+            [true],
+            [false],
+        ];
     }
 
     /**
