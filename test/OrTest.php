@@ -1,10 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Horde\Constraint\Test;
+
+use Horde_Constraint_AlwaysFalse;
+use Horde_Constraint_AlwaysTrue;
+use Horde_Constraint_Or;
 use Horde_Test_Case;
-use \Horde_Constraint_AlwaysTrue;
-use \Horde_Constraint_AlwaysFalse;
-use \Horde_Constraint_Or;
 
 class OrTest extends Horde_Test_Case
 {

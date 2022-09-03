@@ -1,8 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Horde\Constraint\Test;
+
+use Horde_Constraint_Null;
 use Horde_Test_Case;
-use \Horde_Constraint_Null;
 
 class NullTest extends Horde_Test_Case
 {
