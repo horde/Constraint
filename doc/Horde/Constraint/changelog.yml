@@ -4,11 +4,12 @@
   state:
     release: alpha
     api: alpha
-  date: 2021-03-13
+  date: 2022-11-05
   license:
     identifier: BSD-2-Clause
     uri: http://www.horde.org/licenses/bsd
   notes: |
+    [rla] Alpha Release for PHP 8.
     [rla] Adjust for PHP 8.1 and convert to namespaced code.
     |+
 3.0.0alpha3:

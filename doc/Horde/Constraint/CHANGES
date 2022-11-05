@@ -2,7 +2,9 @@
 v3.0.0alpha4
 ------------
 
-
+[rla] Alpha Release for PHP 8.
+[rla] Adjust for PHP 8.1 and convert to namespaced code.
+|+
 
 
 ------------
