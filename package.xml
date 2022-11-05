@@ -10,7 +10,7 @@
   <email>chuck@horde.org</email>
   <active>no</active>
  </lead>
- <date>2021-03-13</date>
+ <date>2022-11-05</date>
  <version>
   <release>3.0.0alpha4</release>
   <api>3.0.0alpha1</api>
@@ -21,10 +21,21 @@
  </stability>
  <license uri="http://www.horde.org/licenses/bsd">BSD-2-Clause</license>
  <notes>
-* 
+* [rla] Alpha Release for PHP 8.
+* [rla] Adjust for PHP 8.1 and convert to namespaced code.
+* |+
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
+   <dir name=".github">
+    <dir name="workflows">
+     <file name="ci.yml" role="php" />
+     <file name="phpdoc.yml" role="php" />
+     <file name="release.yml" role="php" />
+     <file name="update-composer-json.yml" role="php" />
+     <file name="update-satis.yml" role="php" />
+    </dir> <!-- /.github/workflows -->
+   </dir> <!-- /.github -->
    <dir name="doc">
     <dir name="Horde">
      <dir name="Constraint">
@@ -49,31 +60,41 @@
      <file name="Constraint.php" role="php" />
     </dir> <!-- /lib/Horde -->
    </dir> <!-- /lib -->
+   <dir name="src">
+    <file name="AlwaysFalse.php" role="php" />
+    <file name="AlwaysTrue.php" role="php" />
+    <file name="AndCoupler.php" role="php" />
+    <file name="Constraint.php" role="php" />
+    <file name="Coupler.php" role="php" />
+    <file name="IsEqual.php" role="php" />
+    <file name="IsInstanceOf.php" role="php" />
+    <file name="IsNull.php" role="php" />
+    <file name="Not.php" role="php" />
+    <file name="OrCoupler.php" role="php" />
+    <file name="PregMatch.php" role="php" />
+   </dir> <!-- /src -->
    <dir name="test">
-    <dir name="Horde">
-     <dir name="Constraint">
-      <file name="AllTests.php" role="test" />
-      <file name="AlwaysFalseTest.php" role="test" />
-      <file name="AlwaysTrueTest.php" role="test" />
-      <file name="AndTest.php" role="test" />
-      <file name="bootstrap.php" role="test" />
-      <file name="IsInstanceOfTest.php" role="test" />
-      <file name="NotTest.php" role="test" />
-      <file name="NullTest.php" role="test" />
-      <file name="OrTest.php" role="test" />
-      <file name="PregMatchTest.php" role="test" />
-     </dir> <!-- /test/Horde/Constraint -->
-    </dir> <!-- /test/Horde -->
+    <file name="AllTests.php" role="test" />
+    <file name="AlwaysFalseTest.php" role="test" />
+    <file name="AlwaysTrueTest.php" role="test" />
+    <file name="AndTest.php" role="test" />
+    <file name="bootstrap.php" role="test" />
+    <file name="IsInstanceOfTest.php" role="test" />
+    <file name="NotTest.php" role="test" />
+    <file name="NullTest.php" role="test" />
+    <file name="OrTest.php" role="test" />
+    <file name="PregMatchTest.php" role="test" />
    </dir> <!-- /test -->
+   <file name=".php-cs-fixer.dist.php" role="php" />
    <file name="LICENSE" role="doc" />
   </dir> <!-- / -->
  </contents>
  <dependencies>
   <required>
    <php>
-    <min>7.0.0</min>
-    <max>8.0.0alpha1</max>
-    <exclude>8.0.0alpha1</exclude>
+    <min>7.4.0</min>
+    <max>10.0.0alpha1</max>
+    <exclude>10.0.0alpha1</exclude>
    </php>
    <pearinstaller>
     <min>1.7.0</min>
@@ -82,6 +103,12 @@
  </dependencies>
  <phprelease>
   <filelist>
+   <install as="workflows/ci.yml" name=".github/workflows/ci.yml" />
+   <install as="workflows/phpdoc.yml" name=".github/workflows/phpdoc.yml" />
+   <install as="workflows/release.yml" name=".github/workflows/release.yml" />
+   <install as="workflows/update-composer-json.yml" name=".github/workflows/update-composer-json.yml" />
+   <install as="workflows/update-satis.yml" name=".github/workflows/update-satis.yml" />
+   <install as="" name=".php-cs-fixer.dist.php" />
    <install as="CHANGES" name="doc/Horde/Constraint/CHANGES" />
    <install as="Horde/Constraint.php" name="lib/Horde/Constraint.php" />
    <install as="Horde/Constraint/AlwaysFalse.php" name="lib/Horde/Constraint/AlwaysFalse.php" />
@@ -95,33 +122,30 @@
    <install as="Horde/Constraint/Or.php" name="lib/Horde/Constraint/Or.php" />
    <install as="Horde/Constraint/PregMatch.php" name="lib/Horde/Constraint/PregMatch.php" />
    <install as="LICENSE" name="LICENSE" />
-   <install as="Horde/Constraint/AllTests.php" name="test/Horde/Constraint/AllTests.php" />
-   <install as="Horde/Constraint/AlwaysFalseTest.php" name="test/Horde/Constraint/AlwaysFalseTest.php" />
-   <install as="Horde/Constraint/AlwaysTrueTest.php" name="test/Horde/Constraint/AlwaysTrueTest.php" />
-   <install as="Horde/Constraint/AndTest.php" name="test/Horde/Constraint/AndTest.php" />
-   <install as="Horde/Constraint/bootstrap.php" name="test/Horde/Constraint/bootstrap.php" />
-   <install as="Horde/Constraint/IsInstanceOfTest.php" name="test/Horde/Constraint/IsInstanceOfTest.php" />
-   <install as="Horde/Constraint/NotTest.php" name="test/Horde/Constraint/NotTest.php" />
-   <install as="Horde/Constraint/NullTest.php" name="test/Horde/Constraint/NullTest.php" />
-   <install as="Horde/Constraint/OrTest.php" name="test/Horde/Constraint/OrTest.php" />
-   <install as="Horde/Constraint/PregMatchTest.php" name="test/Horde/Constraint/PregMatchTest.php" />
+   <install as="AlwaysFalse.php" name="src/AlwaysFalse.php" />
+   <install as="AlwaysTrue.php" name="src/AlwaysTrue.php" />
+   <install as="AndCoupler.php" name="src/AndCoupler.php" />
+   <install as="Constraint.php" name="src/Constraint.php" />
+   <install as="Coupler.php" name="src/Coupler.php" />
+   <install as="IsEqual.php" name="src/IsEqual.php" />
+   <install as="IsInstanceOf.php" name="src/IsInstanceOf.php" />
+   <install as="IsNull.php" name="src/IsNull.php" />
+   <install as="Not.php" name="src/Not.php" />
+   <install as="OrCoupler.php" name="src/OrCoupler.php" />
+   <install as="PregMatch.php" name="src/PregMatch.php" />
+   <install as="AllTests.php" name="test/AllTests.php" />
+   <install as="AlwaysFalseTest.php" name="test/AlwaysFalseTest.php" />
+   <install as="AlwaysTrueTest.php" name="test/AlwaysTrueTest.php" />
+   <install as="AndTest.php" name="test/AndTest.php" />
+   <install as="bootstrap.php" name="test/bootstrap.php" />
+   <install as="IsInstanceOfTest.php" name="test/IsInstanceOfTest.php" />
+   <install as="NotTest.php" name="test/NotTest.php" />
+   <install as="NullTest.php" name="test/NullTest.php" />
+   <install as="OrTest.php" name="test/OrTest.php" />
+   <install as="PregMatchTest.php" name="test/PregMatchTest.php" />
   </filelist>
  </phprelease>
  <changelog>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
   <release>
    <version>
     <release>1.0.0alpha1</release>
@@ -344,7 +368,9 @@
    <date>2021-03-13</date>
    <license uri="http://www.horde.org/licenses/bsd">BSD-2-Clause</license>
    <notes>
-* 
+* [rla] Alpha Release for PHP 8.
+* [rla] Adjust for PHP 8.1 and convert to namespaced code.
+* |+
    </notes>
   </release>
  </changelog>
