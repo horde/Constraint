@@ -12,7 +12,7 @@
  </lead>
  <date>2022-11-05</date>
  <version>
-  <release>3.0.0alpha4</release>
+  <release>3.0.0alpha5</release>
   <api>3.0.0alpha1</api>
  </version>
  <stability>
@@ -21,9 +21,7 @@
  </stability>
  <license uri="http://www.horde.org/licenses/bsd">BSD-2-Clause</license>
  <notes>
-* [rla] Alpha Release for PHP 8.
-* [rla] Adjust for PHP 8.1 and convert to namespaced code.
-* |+
+* 
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -146,6 +144,21 @@
   </filelist>
  </phprelease>
  <changelog>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   <release>
    <version>
     <release>1.0.0alpha1</release>
@@ -365,12 +378,27 @@
     <release>alpha</release>
     <api>alpha</api>
    </stability>
-   <date>2021-03-13</date>
+   <date>2022-11-05</date>
    <license uri="http://www.horde.org/licenses/bsd">BSD-2-Clause</license>
    <notes>
 * [rla] Alpha Release for PHP 8.
 * [rla] Adjust for PHP 8.1 and convert to namespaced code.
 * |+
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>3.0.0alpha5</release>
+    <api>3.0.0alpha1</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2022-11-05</date>
+   <license uri="http://www.horde.org/licenses/bsd">BSD-2-Clause</license>
+   <notes>
+* 
    </notes>
   </release>
  </changelog>
