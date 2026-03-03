@@ -1,15 +1,21 @@
 {
     "minimum-stability": "dev",
     "name": "horde/constraint",
-    "description": "Constraint library",
+    "description": "Modern constraint library for evaluating values against rules",
     "type": "library",
     "homepage": "https://www.horde.org/libraries/Horde_Constraint",
     "license": "BSD-2-Clause",
+    "keywords": ["constraint", "validation", "rules", "horde"],
     "authors": [
         {
             "name": "Chuck Hagenbuch",
             "email": "chuck@horde.org",
             "role": "lead"
+        },
+        {
+            "name": "James Pepin",
+            "email": "james@jamespepin.com",
+            "role": "developer"
         }
     ],
     "time": "2022-11-05",
@@ -20,10 +26,10 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ^8 || ^9"
+        "php": "^8.1"
     },
     "require-dev": {
-        "horde/test": "^3 || dev-FRAMEWORK_6_0"
+        "phpunit/phpunit": "^11.5"
     },
     "suggest": {},
     "autoload": {

@@ -1,30 +1,21 @@
 <?php
-
 declare(strict_types=1);
 
 namespace Horde\Constraint\Test;
 
-use Horde_Constraint_AlwaysTrue;
-use Horde_Test_Case;
+use Horde\Constraint\AlwaysTrue;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\TestCase;
 
-class AlwaysTrueTest extends Horde_Test_Case
+#[CoversClass(AlwaysTrue::class)]
+class AlwaysTrueTest extends TestCase
 {
-    public static function randomObjectProvider()
+    public function testEvaluatesToTrue(): void
     {
-        return [
-            ['teststring'],
-            [''],
-            [true],
-            [false],
-        ];
-    }
-
-    /**
-     * @dataProvider randomObjectProvider
-     */
-    public function testEvaluateIsAlwaysTrue($value)
-    {
-        $const = new Horde_Constraint_AlwaysTrue();
-        $this->assertTrue($const->evaluate($value));
+        $constraint = new AlwaysTrue();
+        $this->assertTrue($constraint->evaluate('anything'));
+        $this->assertTrue($constraint->evaluate(null));
+        $this->assertTrue($constraint->evaluate(123));
+        $this->assertTrue($constraint->evaluate([]));
     }
 }
