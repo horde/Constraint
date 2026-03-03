@@ -1,8 +1,12 @@
 ---
 id: Constraint
 name: Constraint
-full: Constraint library
-description: A library for building constraints that evaluate to true or false.
+full: Modern constraint library with PHP 8.1+ type safety
+description: >-
+  A library for building constraints that evaluate values to true or false.
+  Provides dual-stack API: PSR-4 modern implementation with PHP 8.1+ types
+  (AllOf, AnyOf, IsNull, IsEqual, etc.) and PSR-0 legacy compatibility.
+  Useful for validation, filtering, and conditional logic.
 list: dev
 type: library
 homepage: https://www.horde.org/libraries/Horde_Constraint
@@ -13,8 +17,13 @@ authors:
     email: chuck@horde.org
     active: false
     role: lead
+  -
+    name: James Pepin
+    email: james@jamespepin.com
+    active: false
+    role: developer
 version:
-  release: 3.0.0alpha5
+  release: 3.0.0alpha6
   api: 3.0.0alpha1
 state:
   release: alpha
@@ -24,7 +33,6 @@ license:
   uri: http://www.horde.org/licenses/bsd
 dependencies:
   required:
-    php: ^7.4 || ^8 || ^9
+    php: ^8.1
   dev:
-    composer:
-      horde/test: ^3
+    phpunit: ^11.5
