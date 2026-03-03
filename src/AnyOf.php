@@ -7,6 +7,7 @@
  * did not receive this file, see http://www.horde.org/licenses/bsd.
  *
  * @author   James Pepin <james@jamespepin.com>
+ * @author   Chuck Hagenbuch <chuck@horde.org>
  * @category Horde
  * @license  http://www.horde.org/licenses/bsd BSD
  * @package  Constraint
@@ -17,34 +18,34 @@ declare(strict_types=1);
 namespace Horde\Constraint;
 
 /**
- * Constraint that matches values against a PCRE regex.
+ * Constraint that evaluates to true if ANY child constraint evaluates to true.
  *
- * Based on PHPUnit_Framework_Constraint_PCREMatch.
+ * Equivalent to logical OR operation across all constraints.
  *
  * @author    James Pepin <james@jamespepin.com>
+ * @author    Chuck Hagenbuch <chuck@horde.org>
  * @category  Horde
  * @copyright 2009-2026 Horde LLC
  * @license   http://www.horde.org/licenses/bsd BSD
  * @package   Constraint
  */
-class PregMatch implements Constraint
+class AnyOf extends CompoundConstraint
 {
-    private readonly string $pattern;
-
-    public function __construct(string $pattern)
-    {
-        $this->pattern = $pattern;
-    }
-
     /**
-     * Check if the value matches the regex pattern.
-     * 
+     * Evaluate whether a value satisfies ANY child constraint.
+     *
      * @param mixed $value The value to evaluate
-     * 
-     * @return bool True if the pattern matches
+     *
+     * @return bool True if at least one child constraint is satisfied
      */
     public function evaluate(mixed $value): bool
     {
-        return preg_match($this->pattern, (string)$value) > 0;
+        foreach ($this->constraints as $constraint) {
+            if ($constraint->evaluate($value)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

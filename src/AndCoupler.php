@@ -1,6 +1,9 @@
 <?php
+
 /**
- * Copyright 2009-2017 Horde LLC (http://www.horde.org/)
+ * Backward compatibility alias for AllOf.
+ *
+ * Copyright 2009-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (BSD). If you
  * did not receive this file, see http://www.horde.org/licenses/bsd.
@@ -9,32 +12,26 @@
  * @category Horde
  * @license  http://www.horde.org/licenses/bsd BSD
  * @package  Constraint
+ * @deprecated Use AllOf instead
  */
+
 declare(strict_types=1);
 
 namespace Horde\Constraint;
 
 /**
- * Represents a collection of constraints, if one is false, this collection will
- * evaluate to false
+ * Backward compatibility alias for AllOf.
  *
- * Based on PHPUnit_Framework_Constraint_And
+ * @deprecated Use Horde\Constraint\AllOf instead
  *
  * @author    James Pepin <james@jamespepin.com>
  * @category  Horde
- * @copyright 2009-2017 Horde LLC
+ * @copyright 2009-2026 Horde LLC
  * @license   http://www.horde.org/licenses/bsd BSD
  * @package   Constraint
  */
-class AndCoupler extends Coupler
+class AndCoupler extends AllOf
 {
-    public function evaluate($value)
-    {
-        foreach ($this->_constraints as $c) {
-            if (!$c->evaluate($value)) {
-                return false;
-            }
-        }
-        return true;
-    }
+    // This class exists solely for backward compatibility
+    // All functionality is provided by AllOf
 }

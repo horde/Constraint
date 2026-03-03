@@ -1,6 +1,9 @@
 <?php
+
 /**
- * Copyright 2009-2017 Horde LLC (http://www.horde.org/)
+ * Backward compatibility alias for CompoundConstraint.
+ *
+ * Copyright 2009-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (BSD). If you
  * did not receive this file, see http://www.horde.org/licenses/bsd.
@@ -9,52 +12,26 @@
  * @category Horde
  * @license  http://www.horde.org/licenses/bsd BSD
  * @package  Constraint
+ * @deprecated Use CompoundConstraint instead
  */
+
 declare(strict_types=1);
 
 namespace Horde\Constraint;
 
-use InvalidArgumentException;
-
 /**
- * Interface for grouped (compound, coupled) constraints.
+ * Backward compatibility alias for CompoundConstraint.
+ *
+ * @deprecated Use Horde\Constraint\CompoundConstraint instead
  *
  * @author    James Pepin <james@jamespepin.com>
  * @category  Horde
- * @copyright 2009-2017 Horde LLC
+ * @copyright 2009-2026 Horde LLC
  * @license   http://www.horde.org/licenses/bsd BSD
  * @package   Constraint
  */
-abstract class Coupler implements Constraint
+abstract class Coupler extends CompoundConstraint
 {
-    protected $constraints = [];
-
-    public function __construct()
-    {
-        $constraints = func_get_args();
-        foreach ($constraints as $c) {
-            if (! $c instanceof Constraint) {
-                throw new InvalidArgumentException("$c does not implement Horde_Constraint");
-            }
-            $this->addConstraint($c);
-        }
-    }
-
-    public function addConstraint(Constraint $constraint)
-    {
-        $kind = get_class($this);
-        if ($constraint instanceof $kind) {
-            foreach ($constraint->getConstraints() as $c) {
-                $this->addConstraint($c);
-            }
-        } else {
-            $this->constraints[] = $constraint;
-        }
-        return $this;
-    }
-
-    public function getConstraints()
-    {
-        return $this->constraints;
-    }
+    // This class exists solely for backward compatibility
+    // All functionality is provided by CompoundConstraint
 }
