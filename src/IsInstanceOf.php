@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2009-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2009-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (BSD). If you
  * did not receive this file, see http://www.horde.org/licenses/bsd.
@@ -10,32 +11,40 @@
  * @license  http://www.horde.org/licenses/bsd BSD
  * @package  Constraint
  */
+
 declare(strict_types=1);
 
 namespace Horde\Constraint;
 
 /**
- * Checks for an instance of a class
+ * Constraint that checks if a value is an instance of a class.
  *
- * Based on PHPUnit_Framework_Constraint_IsInstanceOf
+ * Based on PHPUnit_Framework_Constraint_IsInstanceOf.
  *
  * @author    James Pepin <james@jamespepin.com>
  * @category  Horde
- * @copyright 2009-2017 Horde LLC
+ * @copyright 2009-2026 Horde LLC
  * @license   http://www.horde.org/licenses/bsd BSD
  * @package   Constraint
  */
 class IsInstanceOf implements Constraint
 {
-    private $type;
+    private readonly string $expectedType;
 
-    public function __construct($type)
+    public function __construct(string $expectedType)
     {
-        $this->type = $type;
+        $this->expectedType = $expectedType;
     }
 
-    public function evaluate($value)
+    /**
+     * Check if the value is an instance of the expected type.
+     * 
+     * @param mixed $value The value to evaluate
+     * 
+     * @return bool True if instanceof matches
+     */
+    public function evaluate(mixed $value): bool
     {
-        return $value instanceof $this->type;
+        return $value instanceof $this->expectedType;
     }
 }
