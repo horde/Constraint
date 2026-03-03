@@ -1,23 +1,41 @@
 <?php
-
 declare(strict_types=1);
 
 namespace Horde\Constraint\Test;
 
-use Horde_Constraint_PregMatch;
-use Horde_Test_Case;
+use Horde\Constraint\PregMatch;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\TestCase;
 
-class PregMatchTest extends Horde_Test_Case
+#[CoversClass(PregMatch::class)]
+class PregMatchTest extends TestCase
 {
-    public function testPregReturnsTrueWhenRegexMatches()
+    public function testMatchesPattern(): void
     {
-        $preg = new Horde_Constraint_PregMatch('/somestring/');
-        $this->assertTrue($preg->evaluate('somestring'));
+        $constraint = new PregMatch('/^test/');
+        $this->assertTrue($constraint->evaluate('test123'));
+        $this->assertFalse($constraint->evaluate('123test'));
     }
 
-    public function testPregReturnsFalseWhenRegex_DoesNot_Match()
+    public function testMatchesComplexPattern(): void
     {
-        $preg = new Horde_Constraint_PregMatch('/somestring/');
-        $this->assertFalse($preg->evaluate('some other string'));
+        $constraint = new PregMatch('/\d{3}-\d{4}/');
+        $this->assertTrue($constraint->evaluate('Phone: 555-1234'));
+        $this->assertFalse($constraint->evaluate('Phone: 55-1234'));
+    }
+
+    public function testCaseSensitiveByDefault(): void
+    {
+        $constraint = new PregMatch('/Test/');
+        $this->assertTrue($constraint->evaluate('Test'));
+        $this->assertFalse($constraint->evaluate('test'));
+    }
+
+    public function testCaseInsensitiveWithModifier(): void
+    {
+        $constraint = new PregMatch('/test/i');
+        $this->assertTrue($constraint->evaluate('Test'));
+        $this->assertTrue($constraint->evaluate('TEST'));
+        $this->assertTrue($constraint->evaluate('test'));
     }
 }

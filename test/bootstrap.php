@@ -1,16 +1,29 @@
 <?php
 
+/**
+ * Modern test bootstrap for Horde_Constraint.
+ *
+ * Copyright 2009-2026 Horde LLC (http://www.horde.org/)
+ *
+ * See the enclosed file LICENSE for license information (BSD). If you
+ * did not receive this file, see http://www.horde.org/licenses/bsd.
+ *
+ * @category   Horde
+ * @package    Constraint
+ * @subpackage UnitTests
+ * @license    http://www.horde.org/licenses/bsd BSD
+ */
+
 declare(strict_types=1);
 
 $candidates = [
-    dirname(__FILE__, 2) . '/vendor/autoload.php',
-    dirname(__FILE__, 4) . '/autoload.php',
+    __DIR__ . '/../vendor/autoload.php',
+    __DIR__ . '/../../../autoload.php',
 ];
-// Cover root case and library case
+
 foreach ($candidates as $candidate) {
     if (file_exists($candidate)) {
         require_once $candidate;
         break;
     }
 }
-\Horde_Test_Bootstrap::bootstrap(dirname(__FILE__));

@@ -1,28 +1,39 @@
 <?php
-
 declare(strict_types=1);
 
 namespace Horde\Constraint\Test;
 
-use Horde_Constraint_IsInstanceOf;
-use Horde_Test_Case;
-use StdClass;
+use Horde\Constraint\IsInstanceOf;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\TestCase;
+use stdClass;
 
-class IsInstanceOfTest extends Horde_Test_Case
+#[CoversClass(IsInstanceOf::class)]
+class IsInstanceOfTest extends TestCase
 {
-    public function testConstraintReturnsFalseWhenInstanceIsWrongClass()
+    public function testEvaluatesTrueForCorrectInstance(): void
     {
-        $foo = new StdClass();
-        $const = new Horde_Constraint_IsInstanceOf('FakeClassName');
-
-        $this->assertFalse($const->evaluate($foo));
+        $constraint = new IsInstanceOf(stdClass::class);
+        $this->assertTrue($constraint->evaluate(new stdClass()));
     }
 
-    public function testConstraintReturnsTrueWhenInstanceIsCorrectClass()
+    public function testEvaluatesFalseForWrongInstance(): void
     {
-        $foo = new StdClass();
-        $const = new Horde_Constraint_IsInstanceOf('StdClass');
+        $constraint = new IsInstanceOf(stdClass::class);
+        $this->assertFalse($constraint->evaluate($this));
+    }
 
-        $this->assertTrue($const->evaluate($foo));
+    public function testEvaluatesFalseForNonObject(): void
+    {
+        $constraint = new IsInstanceOf(stdClass::class);
+        $this->assertFalse($constraint->evaluate('string'));
+        $this->assertFalse($constraint->evaluate(123));
+        $this->assertFalse($constraint->evaluate(null));
+    }
+
+    public function testWorksWithInterfaces(): void
+    {
+        $constraint = new IsInstanceOf(TestCase::class);
+        $this->assertTrue($constraint->evaluate($this));
     }
 }
