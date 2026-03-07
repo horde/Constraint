@@ -34,3 +34,47 @@
     uri: http://www.horde.org/licenses/bsd
   notes: |
     [mjr] Prepare for PHP 8.3.
+3.0.0-alpha8:
+  api: 3.0.0-alpha8
+  state:
+    release: alpha
+    api: alpha
+  date: 2026-03-07
+  license:
+    identifier: BSD-2-Clause
+    uri: https://spdx.org/licenses/BSD-2-Clause.html
+  notes: |-
+    docs: add comprehensive documentation and update metadata
+    test: add comprehensive PSR-4 test suite with PHPUnit 11.5
+    feat: modernize PSR-4 implementation with PHP 8.1+ types
+    Development mode for Constraint-3.0.0alpha5
+    Released Constraint-3.0.0alpha4
+    Upgrade code for PHP 8.1
+    Update metadata and workflows for PHP 8 support
+    Allow PHP 8, move Unit tests to own namespace
+    Add CI job for satis repo update
+    no errors, ci.yml added, bootstrap.php adapted
+    no errors left
+    Development mode for Constraint-3.0.0alpha5
+3.0.0-alpha7:
+  api: 3.0.0-alpha7
+  state:
+    release: alpha
+    api: alpha
+  date: 2026-03-07
+  license:
+    identifier: BSD-2-Clause
+    uri: https://spdx.org/licenses/BSD-2-Clause.html
+  notes: |-
+    docs: add comprehensive documentation and update metadata
+    test: add comprehensive PSR-4 test suite with PHPUnit 11.5
+    feat: modernize PSR-4 implementation with PHP 8.1+ types
+    Development mode for Constraint-3.0.0alpha5
+    Released Constraint-3.0.0alpha4
+    Upgrade code for PHP 8.1
+    Update metadata and workflows for PHP 8 support
+    Allow PHP 8, move Unit tests to own namespace
+    Add CI job for satis repo update
+    no errors, ci.yml added, bootstrap.php adapted
+    no errors left
+    Development mode for Constraint-3.0.0alpha5

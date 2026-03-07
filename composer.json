@@ -1,11 +1,9 @@
 {
-    "minimum-stability": "dev",
     "name": "horde/constraint",
-    "description": "Modern constraint library for evaluating values against rules",
+    "description": "Modern constraint library with PHP 8.1+ type safety",
     "type": "library",
     "homepage": "https://www.horde.org/libraries/Horde_Constraint",
     "license": "BSD-2-Clause",
-    "keywords": ["constraint", "validation", "rules", "horde"],
     "authors": [
         {
             "name": "Chuck Hagenbuch",
@@ -18,19 +16,12 @@
             "role": "developer"
         }
     ],
-    "time": "2022-11-05",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://horde-satis.maintaina.com"
-        }
-    ],
+    "time": "2026-03-07",
+    "repositories": [],
     "require": {
         "php": "^8.1"
     },
-    "require-dev": {
-        "phpunit/phpunit": "^11.5"
-    },
+    "require-dev": {},
     "suggest": {},
     "autoload": {
         "psr-0": {
@@ -46,8 +37,11 @@
         }
     },
     "config": {
-        "allow-plugins": {
-            "horde/horde-installer-plugin": true
+        "allow-plugins": {}
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-FRAMEWORK_6_0": "3.x-dev"
         }
     }
 }
