@@ -7,9 +7,11 @@ namespace Horde\Constraint\Test;
 use Horde_Constraint_AlwaysFalse;
 use Horde_Constraint_AlwaysTrue;
 use Horde_Constraint_And;
-use Horde_Test_Case;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\TestCase;
 
-class AndTest extends Horde_Test_Case
+#[CoversClass(Horde_Constraint_And::class)]
+class AndTest extends TestCase
 {
     public function testAndEvaluatesFalseWhenOneConstraintIsFalse()
     {
@@ -57,7 +59,7 @@ class AndTest extends Horde_Test_Case
 
         $returnConst = $and->addConstraint(new Horde_Constraint_AlwaysFalse());
 
-        $this->assertInstanceOf('Horde_Constraint_And', $returnConst);
+        $this->assertInstanceOf(Horde_Constraint_And::class, $returnConst);
     }
 
     public function testReturnedAndEvaluatesFalseWhenFalseConstraintIsAddedViaSetter()

@@ -7,9 +7,11 @@ namespace Horde\Constraint\Test;
 use Horde_Constraint_AlwaysFalse;
 use Horde_Constraint_AlwaysTrue;
 use Horde_Constraint_Or;
-use Horde_Test_Case;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\TestCase;
 
-class OrTest extends Horde_Test_Case
+#[CoversClass(Horde_Constraint_Or::class)]
+class OrTest extends TestCase
 {
     public function testOrEvaluatesTrueWhenOneConstraintIsTrue()
     {
@@ -57,7 +59,7 @@ class OrTest extends Horde_Test_Case
 
         $returnConst = $or->addConstraint(new Horde_Constraint_AlwaysFalse());
 
-        $this->assertInstanceOf('Horde_Constraint_Or', $returnConst);
+        $this->assertInstanceOf(Horde_Constraint_Or::class, $returnConst);
     }
 
     public function testReturnedOrEvaluatesTrueWhenTrueConstraintIsAddedViaSetter()
