@@ -34,6 +34,18 @@
     uri: http://www.horde.org/licenses/bsd
   notes: |
     [mjr] Prepare for PHP 8.3.
+3.0.0-beta1:
+  api: 3.0.0-beta1
+  state:
+    release: beta
+    api: beta
+  date: 2026-04-09
+  license:
+    identifier: BSD-2-Clause
+    uri: https://spdx.org/licenses/BSD-2-Clause.html
+  notes: |-
+    style: php-cs-fixer
+    test: Remove artifacts from phpunit 5 era
 3.0.0-alpha8:
   api: 3.0.0-alpha8
   state:
