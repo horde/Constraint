@@ -31,9 +31,9 @@ class AlwaysFalse implements Constraint
 {
     /**
      * Always returns false.
-     * 
+     *
      * @param mixed $value The value to evaluate (ignored)
-     * 
+     *
      * @return bool Always false
      */
     public function evaluate(mixed $value): bool

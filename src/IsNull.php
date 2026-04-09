@@ -31,9 +31,9 @@ class IsNull implements Constraint
 {
     /**
      * Check if the value is null.
-     * 
+     *
      * @param mixed $value The value to evaluate
-     * 
+     *
      * @return bool True if null
      */
     public function evaluate(mixed $value): bool

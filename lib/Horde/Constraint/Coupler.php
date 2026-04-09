@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2009-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2009-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (BSD). If you
  * did not receive this file, see http://www.horde.org/licenses/bsd.
@@ -22,7 +23,7 @@
  */
 abstract class Horde_Constraint_Coupler implements Horde_Constraint
 {
-    protected $_constraints = array();
+    protected $_constraints = [];
 
     public function __construct()
     {

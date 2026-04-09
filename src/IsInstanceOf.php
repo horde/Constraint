@@ -38,9 +38,9 @@ class IsInstanceOf implements Constraint
 
     /**
      * Check if the value is an instance of the expected type.
-     * 
+     *
      * @param mixed $value The value to evaluate
-     * 
+     *
      * @return bool True if instanceof matches
      */
     public function evaluate(mixed $value): bool

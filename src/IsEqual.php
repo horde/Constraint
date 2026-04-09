@@ -20,7 +20,7 @@ namespace Horde\Constraint;
  * Constraint that checks for equality.
  *
  * Uses loose comparison (==).
- * 
+ *
  * Based on PHPUnit_Framework_Constraint_IsEqual.
  *
  * @author    James Pepin <james@jamespepin.com>
@@ -40,9 +40,9 @@ class IsEqual implements Constraint
 
     /**
      * Check if the value equals the expected value.
-     * 
+     *
      * @param mixed $value The value to evaluate
-     * 
+     *
      * @return bool True if equal
      */
     public function evaluate(mixed $value): bool

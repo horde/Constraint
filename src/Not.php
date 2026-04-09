@@ -38,9 +38,9 @@ class Not implements Constraint
 
     /**
      * Evaluate the negation of the wrapped constraint.
-     * 
+     *
      * @param mixed $value The value to evaluate
-     * 
+     *
      * @return bool True if the wrapped constraint is false
      */
     public function evaluate(mixed $value): bool

@@ -38,13 +38,13 @@ class PregMatch implements Constraint
 
     /**
      * Check if the value matches the regex pattern.
-     * 
+     *
      * @param mixed $value The value to evaluate
-     * 
+     *
      * @return bool True if the pattern matches
      */
     public function evaluate(mixed $value): bool
     {
-        return preg_match($this->pattern, (string)$value) > 0;
+        return preg_match($this->pattern, (string) $value) > 0;
     }
 }
