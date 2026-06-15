@@ -20,10 +20,10 @@ authors:
     active: false
     role: developer
 version:
-  release: 3.0.0-beta1
+  release: 3.0.0
   api: 3.0.0alpha1
 state:
-  release: beta
+  release:
   api: alpha
 license:
   identifier: BSD-2-Clause

@@ -1,39 +1,15 @@
 ---
-3.0.0alpha6:
-  api: 3.0.0alpha1
+3.0.0:
+  api: 3.0.0
   state:
-    release: alpha
-    api: alpha
-  date: 2026-03-03
+    release: stable
+    api: stable
+  date: 2026-06-15
   license:
     identifier: BSD-2-Clause
-    uri: http://www.horde.org/licenses/bsd
-  notes: |
-    [jan] Add modernized PSR-4 implementation with PHP 8.1+ type safety.
-    [jan] Add AllOf class (modern AND logic).
-    [jan] Add AnyOf class (modern OR logic).
-    [jan] Add CompoundConstraint base class for compound constraints.
-    [jan] Rename Coupler → CompoundConstraint (clearer name).
-    [jan] Add full PHP 8.1+ type declarations (mixed, bool, readonly).
-    [jan] Add variadic constructors for compound constraints.
-    [jan] Fix AndCoupler bug ($_constraints property reference).
-    [jan] Add backward compatibility aliases (AndCoupler, OrCoupler, Coupler).
-    [jan] Add comprehensive PSR-4 test suite (40 tests, 68 assertions).
-    [jan] Update to PHPUnit 11.5 with modern attributes.
-    [jan] Require PHP ^8.1.
-    [jan] PSR-0 API remains fully backward compatible.
-    [jan] Add README.md and UPGRADING.md documentation.
-3.0.0alpha5:
-  api: 3.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2023-11-21
-  license:
-    identifier: BSD-2-Clause
-    uri: http://www.horde.org/licenses/bsd
-  notes: |
-    [mjr] Prepare for PHP 8.3.
+    uri: https://spdx.org/licenses/BSD-2-Clause.html
+  notes: |-
+    chore: Update workflow dependency
 3.0.0-beta1:
   api: 3.0.0-beta1
   state:
@@ -90,3 +66,38 @@
     no errors, ci.yml added, bootstrap.php adapted
     no errors left
     Development mode for Constraint-3.0.0alpha5
+3.0.0alpha6:
+  api: 3.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2026-03-03
+  license:
+    identifier: BSD-2-Clause
+    uri: http://www.horde.org/licenses/bsd
+  notes: |
+    [jan] Add modernized PSR-4 implementation with PHP 8.1+ type safety.
+    [jan] Add AllOf class (modern AND logic).
+    [jan] Add AnyOf class (modern OR logic).
+    [jan] Add CompoundConstraint base class for compound constraints.
+    [jan] Rename Coupler → CompoundConstraint (clearer name).
+    [jan] Add full PHP 8.1+ type declarations (mixed, bool, readonly).
+    [jan] Add variadic constructors for compound constraints.
+    [jan] Fix AndCoupler bug ($_constraints property reference).
+    [jan] Add backward compatibility aliases (AndCoupler, OrCoupler, Coupler).
+    [jan] Add comprehensive PSR-4 test suite (40 tests, 68 assertions).
+    [jan] Update to PHPUnit 11.5 with modern attributes.
+    [jan] Require PHP ^8.1.
+    [jan] PSR-0 API remains fully backward compatible.
+    [jan] Add README.md and UPGRADING.md documentation.
+3.0.0alpha5:
+  api: 3.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2023-11-21
+  license:
+    identifier: BSD-2-Clause
+    uri: http://www.horde.org/licenses/bsd
+  notes: |
+    [mjr] Prepare for PHP 8.3.
